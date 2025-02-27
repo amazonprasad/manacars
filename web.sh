@@ -55,7 +55,7 @@ cd /usr/share/nginx/html &>> $LOGFILE
 VALIDATE $? "change directory"
 
 
-unzip /tmp/frontend.zip  &>> $LOGFILE 
+unzip -o /tmp/frontend.zip  &>> $LOGFILE 
 
 VALIDATE $? "Unzip the files"
 
