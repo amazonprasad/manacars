@@ -61,7 +61,7 @@ VALIDATE $? " Downloading the user files"
 
 cd /app 
 
-unzip -O /tmp/user.zip &>> $LOGFILE 
+unzip -o /tmp/user.zip &>> $LOGFILE 
 
 VALIDATE $? " Unziping the files"
 
