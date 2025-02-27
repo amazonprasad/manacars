@@ -49,27 +49,6 @@ else
     echo -e " Roboshop user already exists $Y SKIPPING $N"
 fi
 
-dnf module disable nodejs -y &>> $LOGFILE
-
-VALIDATE $? " disable nodejs"
-
-dnf module enable nodejs:18 -y &>> $LOGFILE
-
-VALIDATE $? " enable nodejs"
-
-dnf install nodejs -y &>> $LOGFILE
-
-VALIDATE $? "Install nodejs"
-
-id=roboshop
-if [ $? -ne 0 ]
-then 
-    useradd roboshop 
-    echo -e " $G Roboshop user creation $N"
-else 
-    echo -e " Roboshop user already exists $Y SKIPPING $N"
-fi
-
 mkdir -p /app 
 
 curl -L -o /tmp/cart.zip https://roboshop-artifacts.s3.amazonaws.com/cart.zip  &>> $LOGFILE
