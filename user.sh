@@ -87,7 +87,7 @@ systemctl start user &>> $LOGFILE
 
 VALIDATE $? "Start user"
 
-cp /home/centos/manacars/mongodb.repo/ /etc/yum.repos.d/mongo.repo
+cp /home/centos/manacars/mongodb.repo /etc/yum.repos.d/mongo.repo
 
 VALIDATE $? " Copying mongodb files"
 
