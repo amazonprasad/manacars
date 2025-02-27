@@ -29,7 +29,7 @@ else
     echo -e " $G Your are the root user $N"
 fi 
 
-cp /home/cetos/manacars/mongodb.repo  /etc/yum.repos.d/mongo.repo &>> $LOGFILE
+cp /home/centos/manacars/mongodb.repo  /etc/yum.repos.d/mongo.repo &>> $LOGFILE
 
 VALIDATE $? " Copying mongodb repo"
 
