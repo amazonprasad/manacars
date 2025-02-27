@@ -97,3 +97,6 @@ VALIDATE $? " Installing mongodb"
 
 mongo --host $Mongodb_Host </app/schema/user.js &>> $LOGFILE 
 
+VALIDATE $? " Set mongodb host"
+
+
