@@ -41,13 +41,14 @@ dnf install nodejs -y &>> $LOGFILE
 
 VALIDATE $? " Install nodejs"
 
-if [ $IDUSER -ne 0 ];
+id=roboshop
+if [ $? -ne 0 ]
 then 
-    echo -e " $R ERROR: Your are not the root user $N"
-    exit 1
+    useradd roboshop 
+    echo -e " $G Roboshop user creation $N"
 else 
-    echo -e " $G Your are the root user $N"
-fi 
+    echo -e " Roboshop user already exists $Y SKIPPING $N"
+fi
 
 mkdir -p /app 
 
