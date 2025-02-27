@@ -52,5 +52,5 @@ VALIDATE $? " allowed traffic"
 systemctl restart mongod &>> $LOGFILE
  VALIDATE $? " Restart mongodb"
 
- s
+ 
 
