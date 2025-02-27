@@ -34,7 +34,7 @@ dnf install redis -y  &>> $LOGFILE
 
 VALIDATE $? "Install redis"
 
-redis-server --version
+redis-server --version &>> $LOGFILE
 
 VALIDATE $? "Redis version"
 
@@ -48,5 +48,5 @@ VALIDATE $? " enable redis"
 
 systemctl start redis 
 
-VALIDATE $? Start Redis"
+VALIDATE $? "Start Redis"
 
