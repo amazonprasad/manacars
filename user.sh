@@ -95,5 +95,5 @@ dnf install mongodb-org-shell -y &>> $LOGFILE
 
 VALIDATE $? " Installing mongodb"
 
-mongo --host $Mongodb_Host </app/schema/user.js
+mongo --host $Mongodb_Host </app/schema/user.js &>> $LOGFILE 
 
